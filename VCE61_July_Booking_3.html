@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VCE-61 One-to-One Booking — July 2026</title>
+<style>
+/* latin-ext */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmmono/v16/aFTU7PB1QTsUX8KYthSQBK6PYK3EXw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmmono/v16/aFTU7PB1QTsUX8KYthqQBK6PYK0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmmono/v16/aFTR7PB1QTsUX8KYvumzEY2tbYf-Vlh3uA.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmmono/v16/aFTR7PB1QTsUX8KYvumzEYOtbYf-Vlg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu6-K6z9mXgjU0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+</style>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0f2544;
+    --navy-light: #1a3a6b;
+    --accent: #2a7fff;
+    --accent-light: #e8f1ff;
+    --green: #0e7c4a;
+    --green-bg: #e6f7ef;
+    --green-border: #6fcca0;
+    --red: #b91c1c;
+    --red-bg: #fef2f2;
+    --red-border: #fca5a5;
+    --text: #0f2544;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --surface: #f8fafc;
+    --white: #ffffff;
+    --radius: 10px;
+    --radius-lg: 16px;
+  }
+  body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: var(--text); min-height: 100vh; }
+  header { background: var(--navy); color: white; padding: 2rem 1.5rem 1.75rem; text-align: center; }
+  header .label { font-size: 11px; font-family: 'DM Mono', monospace; letter-spacing: 0.12em; color: #93b8f0; margin-bottom: 8px; text-transform: uppercase; }
+  header h1 { font-size: clamp(20px, 5vw, 28px); font-weight: 600; color: white; margin-bottom: 6px; }
+  header p { font-size: 14px; color: #93b8f0; }
+  .stats-bar { display: flex; justify-content: center; background: var(--navy-light); border-top: 1px solid rgba(255,255,255,0.08); }
+  .stat-item { padding: 12px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); flex: 1; max-width: 160px; }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-size: 22px; font-weight: 600; color: white; }
+  .stat-lbl { font-size: 11px; color: #93b8f0; margin-top: 1px; }
+  .main { max-width: 680px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 1.25rem; padding: 10px 14px; background: white; border: 1px solid var(--border); border-radius: var(--radius); font-size: 13px; color: var(--text-muted); }
+  .leg { display: flex; align-items: center; gap: 7px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .dot-open { background: var(--green); }
+  .dot-taken { background: #dc2626; }
+  .dot-meeting { background: var(--accent); }
+  .day-card { background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); margin-bottom: 10px; overflow: hidden; }
+  .day-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: var(--surface); border-bottom: 1px solid var(--border); }
+  .day-head.meeting { background: var(--accent-light); border-bottom-color: #bfdbfe; }
+  .day-info { display: flex; align-items: center; gap: 10px; }
+  .day-num { width: 36px; height: 36px; background: var(--navy); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; font-family: 'DM Mono', monospace; flex-shrink: 0; }
+  .day-num.meeting-num { background: var(--accent); }
+  .day-label { font-size: 14px; font-weight: 500; color: var(--text); }
+  .day-sub { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+  .day-badge { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; font-family: 'DM Mono', monospace; letter-spacing: 0.04em; }
+  .badge-meeting { background: var(--accent-light); color: var(--accent); border: 1px solid #bfdbfe; }
+  .badge-open { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge-full { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .slots-row { display: flex; gap: 8px; padding: 12px 16px; flex-wrap: wrap; }
+  .slot-btn { display: flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: var(--radius); font-size: 13px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; border: 1.5px solid; transition: transform 0.1s, opacity 0.1s; }
+  .slot-btn:active { transform: scale(0.97); }
+  .slot-open { background: var(--green-bg); border-color: var(--green-border); color: var(--green); }
+  .slot-open:hover { background: #c6f0dc; }
+  .slot-taken { background: var(--red-bg); border-color: var(--red-border); color: var(--red); cursor: not-allowed; opacity: 0.85; }
+  .meeting-notice { padding: 12px 16px; font-size: 13px; color: #1d4ed8; display: flex; align-items: center; gap: 8px; }
+  .overlay { display: none; position: fixed; inset: 0; background: rgba(15, 37, 68, 0.5); z-index: 100; align-items: center; justify-content: center; padding: 1rem; }
+  .overlay.show { display: flex; }
+  .modal { background: white; border-radius: var(--radius-lg); padding: 1.75rem; width: 100%; max-width: 400px; box-shadow: 0 20px 60px rgba(15,37,68,0.2); }
+  .modal-slot-info { background: var(--accent-light); border: 1px solid #bfdbfe; border-radius: var(--radius); padding: 10px 14px; margin-bottom: 1.25rem; font-size: 14px; color: #1d4ed8; font-weight: 500; }
+  .modal h3 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .modal p { font-size: 13px; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .modal label { display: block; font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
+  .modal input { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: var(--radius); font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--text); margin-bottom: 1rem; outline: none; transition: border-color 0.15s; }
+  .modal input:focus { border-color: var(--accent); }
+  .modal input.error { border-color: #dc2626; }
+  .modal-btns { display: flex; gap: 8px; }
+  .btn-confirm { flex: 1; padding: 11px; background: var(--navy); color: white; border: none; border-radius: var(--radius); font-size: 14px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: background 0.15s; }
+  .btn-confirm:hover { background: var(--navy-light); }
+  .btn-cancel { padding: 11px 18px; background: none; color: var(--text-muted); border: 1.5px solid var(--border); border-radius: var(--radius); font-size: 14px; font-family: 'DM Sans', sans-serif; cursor: pointer; }
+  .btn-cancel:hover { background: var(--surface); }
+  .success-toast { display: none; position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); background: var(--navy); color: white; padding: 12px 20px; border-radius: var(--radius); font-size: 14px; font-weight: 500; z-index: 200; white-space: nowrap; box-shadow: 0 4px 20px rgba(15,37,68,0.3); }
+  .success-toast.show { display: block; }
+  footer { text-align: center; padding: 1.5rem 1rem; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 1rem; }
+  @media (max-width: 480px) { .stat-item { padding: 10px 12px; } .stat-num { font-size: 18px; } header { padding: 1.5rem 1rem 1.25rem; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="label">VCE-61 · Training Coach: William Lien</div>
+  <h1>One-to-One Session Booking</h1>
+  <p>July 2026 · Group meeting on 23 July (Thursday)</p>
+</header>
+
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num" id="s-total">14</div><div class="stat-lbl">Total slots</div></div>
+  <div class="stat-item"><div class="stat-num" id="s-booked" style="color:#7dd3fc">0</div><div class="stat-lbl">Booked</div></div>
+  <div class="stat-item"><div class="stat-num" id="s-open" style="color:#6ee7b7">14</div><div class="stat-lbl">Available</div></div>
+</div>
+
+<div class="main">
+  <div class="legend">
+    <span class="leg"><span class="dot dot-open"></span> Available — click to book</span>
+    <span class="leg"><span class="dot dot-taken"></span> Taken</span>
+    <span class="leg"><span class="dot dot-meeting"></span> Group meeting day</span>
+  </div>
+  <div id="schedule"><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">16</div>
+          <div>
+            <div class="day-label">16 Jul · Thu</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 10:00 AM · Available</button><button class="slot-btn slot-open"><span>+</span> 2:00 PM · Available</button></div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">17</div>
+          <div>
+            <div class="day-label">17 Jul · Fri</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 10:00 AM · Available</button></div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">20</div>
+          <div>
+            <div class="day-label">20 Jul · Mon</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 2:00 PM · Available</button></div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">22</div>
+          <div>
+            <div class="day-label">22 Jul · Wed</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 10:00 AM · Available</button></div></div><div class="day-card">
+      <div class="day-head meeting">
+        <div class="day-info">
+          <div class="day-num meeting-num">23</div>
+          <div>
+            <div class="day-label">23 Jul · Thu</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-meeting">Group meeting</span>
+      </div>
+    <div class="meeting-notice"><span>📅</span> Monthly group meeting — no one-to-one sessions on this day</div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">24</div>
+          <div>
+            <div class="day-label">24 Jul · Fri</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 10:00 AM · Available</button></div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">27</div>
+          <div>
+            <div class="day-label">27 Jul · Mon</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 10:00 AM · Available</button><button class="slot-btn slot-open"><span>+</span> 2:00 PM · Available</button></div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">28</div>
+          <div>
+            <div class="day-label">28 Jul · Tue</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 2:00 PM · Available</button></div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">29</div>
+          <div>
+            <div class="day-label">29 Jul · Wed</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 10:00 AM · Available</button><button class="slot-btn slot-open"><span>+</span> 2:00 PM · Available</button></div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">30</div>
+          <div>
+            <div class="day-label">30 Jul · Thu</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 10:00 AM · Available</button><button class="slot-btn slot-open"><span>+</span> 2:00 PM · Available</button></div></div><div class="day-card">
+      <div class="day-head ">
+        <div class="day-info">
+          <div class="day-num ">31</div>
+          <div>
+            <div class="day-label">31 Jul · Fri</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        <span class="day-badge badge-open">Available</span>
+      </div>
+    <div class="slots-row"><button class="slot-btn slot-open"><span>+</span> 10:00 AM · Available</button></div></div></div>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3>Book this slot</h3>
+    <p>Enter your name to confirm your 2-hour session.</p>
+    <div class="modal-slot-info" id="modal-slot-info"></div>
+    <label for="modal-name">Your name</label>
+    <input type="text" id="modal-name" placeholder="e.g. James Yap" autocomplete="off">
+    <div class="modal-btns">
+      <button class="btn-confirm" onclick="confirmBook()">Confirm booking</button>
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="success-toast" id="toast"></div>
+
+<footer>VCE-61 · Sessions are 2 hours · First come, first served</footer>
+
+<script>
+const DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MEETING = "2026-07-23";
+
+const initialSlots = {
+  "2026-07-16|10:00 AM": null,
+  "2026-07-16|2:00 PM":  null,
+  "2026-07-17|10:00 AM": null,
+  "2026-07-20|2:00 PM":  null,
+  "2026-07-22|10:00 AM": null,
+  "2026-07-24|10:00 AM": null,
+  "2026-07-27|10:00 AM": null,
+  "2026-07-27|2:00 PM":  null,
+  "2026-07-28|2:00 PM":  null,
+  "2026-07-29|10:00 AM": null,
+  "2026-07-29|2:00 PM":  null,
+  "2026-07-30|10:00 AM": null,
+  "2026-07-30|2:00 PM":  null,
+  "2026-07-31|10:00 AM": null,
+};
+
+let slots = JSON.parse(localStorage.getItem("vce61-july-2026") || "null") || JSON.parse(JSON.stringify(initialSlots));
+let pending = null;
+
+function save() { localStorage.setItem("vce61-july-2026", JSON.stringify(slots)); }
+
+function fmtDate(iso) {
+  const d = new Date(iso);
+  return d.getDate() + " " + MONTHS[d.getMonth()] + " · " + DAYS[d.getDay()];
+}
+
+function getDayNum(iso) { return new Date(iso).getDate(); }
+
+function renderStats() {
+  const vals = Object.values(slots);
+  const total = vals.length;
+  const booked = vals.filter(v => v).length;
+  document.getElementById("s-total").textContent = total;
+  document.getElementById("s-booked").textContent = booked;
+  document.getElementById("s-open").textContent = total - booked;
+}
+
+function renderSchedule() {
+  const container = document.getElementById("schedule");
+  container.innerHTML = "";
+
+  const grouped = {};
+  Object.keys(slots).forEach(k => {
+    const [date] = k.split("|");
+    if (!grouped[date]) grouped[date] = [];
+    grouped[date].push(k);
+  });
+
+  const allDates = Object.keys(grouped);
+  if (!grouped[MEETING]) allDates.push(MEETING);
+  allDates.sort();
+
+  allDates.forEach(date => {
+    const isMeeting = date === MEETING;
+    const card = document.createElement("div");
+    card.className = "day-card";
+
+    const slotKeys = grouped[date] || [];
+    const allTaken = slotKeys.length > 0 && slotKeys.every(k => slots[k]);
+    const anyOpen = slotKeys.some(k => !slots[k]);
+
+    let badgeHtml = "";
+    if (isMeeting) badgeHtml = `<span class="day-badge badge-meeting">Group meeting</span>`;
+    else if (allTaken) badgeHtml = `<span class="day-badge badge-full">Full</span>`;
+    else if (anyOpen) badgeHtml = `<span class="day-badge badge-open">Available</span>`;
+
+    card.innerHTML = `
+      <div class="day-head ${isMeeting ? 'meeting' : ''}">
+        <div class="day-info">
+          <div class="day-num ${isMeeting ? 'meeting-num' : ''}">${getDayNum(date)}</div>
+          <div>
+            <div class="day-label">${fmtDate(date)}</div>
+            <div class="day-sub">July 2026</div>
+          </div>
+        </div>
+        ${badgeHtml}
+      </div>
+    `;
+
+    if (isMeeting) {
+      const notice = document.createElement("div");
+      notice.className = "meeting-notice";
+      notice.innerHTML = `<span>&#128197;</span> Monthly group meeting — no one-to-one sessions on this day`;
+      card.appendChild(notice);
+    } else {
+      const row = document.createElement("div");
+      row.className = "slots-row";
+      slotKeys.forEach(k => {
+        const time = k.split("|")[1];
+        const who = slots[k];
+        const btn = document.createElement("button");
+        btn.className = "slot-btn " + (who ? "slot-taken" : "slot-open");
+        btn.innerHTML = who
+          ? `<span>&#128100;</span> ${time} · ${who}`
+          : `<span>&#43;</span> ${time} · Available`;
+        if (!who) btn.onclick = () => openModal(k, date, time);
+        else btn.disabled = true;
+        row.appendChild(btn);
+      });
+      card.appendChild(row);
+    }
+
+    container.appendChild(card);
+  });
+}
+
+function openModal(key, date, time) {
+  pending = key;
+  document.getElementById("modal-slot-info").textContent = fmtDate(date) + " · " + time;
+  document.getElementById("modal-name").value = "";
+  document.getElementById("modal-name").classList.remove("error");
+  document.getElementById("overlay").classList.add("show");
+  setTimeout(() => document.getElementById("modal-name").focus(), 80);
+}
+
+function closeModal() {
+  document.getElementById("overlay").classList.remove("show");
+  pending = null;
+}
+
+function confirmBook() {
+  const name = document.getElementById("modal-name").value.trim();
+  if (!name) { document.getElementById("modal-name").classList.add("error"); return; }
+  slots[pending] = name;
+  save();
+  closeModal();
+  renderStats();
+  renderSchedule();
+  showToast("Booked! See you then, " + name + " \uD83D\uDC4B");
+}
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 3000);
+}
+
+document.getElementById("overlay").addEventListener("click", function(e) {
+  if (e.target === this) closeModal();
+});
+
+document.getElementById("modal-name").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") confirmBook();
+});
+
+renderStats();
+renderSchedule();
+</script>
+
+
+</body></html>
